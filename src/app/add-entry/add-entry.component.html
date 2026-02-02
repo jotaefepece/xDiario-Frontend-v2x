@@ -1,0 +1,47 @@
+<div class="add-entry-container">
+  <h2 class="title">Agregar tu entrada diaria</h2>
+
+  <!-- Mensajes de requisitos / errores -->
+  <div class="requirements neon-card">
+    <p>Requisitos para publicar:</p>
+    <ul>
+      <li [class.completed]="session.likedId !== null">
+        <span class="emoji">👍</span> Dar un like a una entrada
+      </li>
+      <li [class.completed]="session.dislikedId !== null">
+        <span class="emoji">👎</span> Dar un dislike a una entrada
+      </li>
+      <li [class.completed]="texto.trim().toLowerCase().startsWith('hoy') && texto.trim().length > 4">
+        <span class="emoji">✍️</span> Escribir un mensaje que comience con <strong>"Hoy"</strong>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="showError" class="error-message neon-glow">
+    {{ errorMessage }}
+  </div>
+
+  <div class="form-wrapper neon-card">
+    <textarea
+      [(ngModel)]="texto"
+      name="texto"
+      placeholder="Hoy..."
+      maxlength="200"
+      rows="5"
+      class="input-text neon-input"
+      (input)="checkForm()"
+    ></textarea>
+
+    <div class="form-bottom">
+      <div class="char-count">{{ texto.length }} / 200</div>
+      <button
+        type="button"
+        (click)="submitEntry()"
+        [disabled]="!isFormValid()"
+        class="submit-btn neon-btn">
+        Publicar
+      </button>
+    </div>
+  </div>
+</div>

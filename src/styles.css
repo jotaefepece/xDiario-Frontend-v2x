@@ -1,0 +1,25 @@
+/* Reset y base oscura global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #0a0e17;
+  color: #d1d5db;
+  margin: 0;
+  padding: 0;
+  height: 80%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Contenedor principal si existe (app.component o router-outlet) */
+app-root {
+  display: block;
+  min-height: 100vh;
+}

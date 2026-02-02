@@ -1,0 +1,17 @@
+
+<section class="entries">
+  <div *ngFor="let e of entries" class="entry" [ngClass]="{'popular': e.net > 0, 'unpopular': e.net < 0}">
+    <div class="entry-content">
+      <p class="entry-text">{{ e.texto }}</p>
+      
+      <div class="actions">
+        <button (click)="like(e.id)" [disabled]="session.likedId === e.id" class="btn-like">
+          👍 {{ e.likes }}
+        </button>
+        <button (click)="dislike(e.id)" [disabled]="session.dislikedId === e.id" class="btn-dislike">
+          👎 {{ e.dislikes }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

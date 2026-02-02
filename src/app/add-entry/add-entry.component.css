@@ -1,0 +1,146 @@
+.add-entry-container {
+  max-width: 620px;
+  margin: 1.5rem auto 3rem;
+  padding: 1.8rem 1.6rem;
+  background: #111827;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 4px 25px rgba(59,130,246,0.1);
+  color: #e2e8f0;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 auto 1.4rem;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.neon-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid #1e293b;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.neon-card:hover {
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.18);
+}
+
+.requirements p {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  color: #94a3b8;
+}
+
+.requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requirements li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0.9rem 0;
+  font-size: 1.05rem;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+.requirements li.completed {
+  opacity: 1;
+  color: #60a5fa;
+  font-weight: 500;
+}
+
+.emoji {
+  font-size: 1.4rem;
+  min-width: 30px;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin: 1.2rem 0;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #ef4444;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.25);
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.neon-input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 1.2rem;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.25);
+}
+
+.neon-input::placeholder {
+  color: #475569;
+}
+
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.char-count {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.neon-btn {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  min-width: 180px;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.neon-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.6);
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+}
+
+.neon-btn:disabled {
+  background: #334155;
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.6;
+}
